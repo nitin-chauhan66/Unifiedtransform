@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => getenv('APP_NAME', 'Laravel'),
 
     /*
     |--------------------------------------------------------------------------
@@ -22,11 +22,11 @@ return [
     |
     | This value determines the "environment" your application is currently
     | running in. This may determine how you prefer to configure various
-    | services your application utilizes. Set this in your ".env" file.
+    | services your application utilizes. Set this in your ".getenv" file.
     |
     */
 
-    'env' => env('APP_ENV', 'production'),
+    'getenv' => getenv('APP_ENV', 'production'),
 
     /*
     |--------------------------------------------------------------------------
@@ -39,7 +39,7 @@ return [
     |
     */
 
-    'debug' => env('APP_DEBUG', false),
+    'debug' => getenv('APP_DEBUG', false),
 
     /*
     |--------------------------------------------------------------------------
@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost'),
+    'url' => getenv('APP_URL', 'http://localhost'),
 
     /*
     |--------------------------------------------------------------------------
@@ -104,7 +104,7 @@ return [
     |
     */
 
-    'key' => env('APP_KEY'),
+    'key' => getenv('APP_KEY'),
 
     'cipher' => 'AES-256-CBC',
 
@@ -121,9 +121,9 @@ return [
     |
     */
 
-    'log' => env('APP_LOG', 'single'),
+    'log' => getenv('APP_LOG', 'single'),
 
-    'log_level' => env('APP_LOG_LEVEL', 'debug'),
+    'log_level' => getenv('APP_LOG_LEVEL', 'debug'),
 
     /*
     |--------------------------------------------------------------------------
