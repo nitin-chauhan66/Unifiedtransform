@@ -1,6 +1,5 @@
 <?php
-$db_url = getenv('DATABASE_URL');
-$DATABASE_URL=parse_url($db_url);
+$DATABASE_URL=parse_url(getenv("DATABASE_URL"));
 return [
 
     /*
@@ -59,13 +58,13 @@ return [
             'driver' => 'pgsql',
             'host' => $DATABASE_URL["host"],
             'port' => $DATABASE_URL["port"],
-            'database' => ltrim($DATABASE_URL["path"],"/"),
+            'database' => ltrim($DATABASE_URL["path"], "/"),
             'username' => $DATABASE_URL["user"],
             'password' => $DATABASE_URL["pass"],
             'charset' => 'utf8',
             'prefix' => '',
             'schema' => 'public',
-            'sslmode' => 'prefer',
+            'sslmode' => 'require',
         ],
 
         'sqlsrv' => [
