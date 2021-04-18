@@ -19,7 +19,7 @@ class User extends Model implements
     AuthorizableContract,
     CanResetPasswordContract
 {
-    use Authenticatable, Authorizable, CanResetPassword, HasApiTokens, Notifiable, Impersonate, Billable;
+    use Authenticatable, Authorizable, CanResetPassword, Notifiable, Impersonate, Billable;
 
     /**
      * The attributes that are mass assignable.
