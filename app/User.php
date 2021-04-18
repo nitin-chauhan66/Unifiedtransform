@@ -4,7 +4,6 @@ namespace App;
 
 use App\Model;
 use Laravel\Cashier\Billable;
-use Laravel\Passport\HasApiTokens;
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Lab404\Impersonate\Models\Impersonate;
