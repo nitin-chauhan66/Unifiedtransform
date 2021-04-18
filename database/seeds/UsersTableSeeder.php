@@ -26,7 +26,7 @@ class UsersTableSeeder extends Seeder
             'email'    => 'vinish@oldnewtech.in',
             'password' => bcrypt('admin@admin'),
             'role'     => 'master',
-            'student_code' => 0000000,
+            'student_code' => 0000001,
             'active'   => 1,
             'verified' => 1,
         ]);
