@@ -1,5 +1,5 @@
 <?php
-// $DATABASE_URL=parse_url(getenv("DATABASE_URL"));
+$DATABASE_URL=parse_url(getenv("DATABASE_URL"));
 return [
 
     /*
@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'default' => getenv('DB_CONNECTION'),
+    'default' => env('DB_CONNECTION','mysql'),
 
     /*
     |--------------------------------------------------------------------------
@@ -41,11 +41,11 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'host' => getenv('DB_HOST'),
-            'port' => getenv('DB_PORT'),
-            'database' => getenv('DB_DATABASE'),
-            'username' => getenv('DB_USERNAME'),
-            'password' => getenv('DB_PASSWORD'),
+            'host' => $DATABASE_URL['host'],
+            'port' => $DATABASE_URL['post'],
+            'database' =>ltrim($DATABASE_URL["path"], "/"),
+            'username' => $DATABASE_URL["user"],
+            'password' => $DATABASE_URL["pass"],
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
