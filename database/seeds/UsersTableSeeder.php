@@ -21,15 +21,6 @@ class UsersTableSeeder extends Seeder
             'active'   => 1,
             'verified' => 1,
         ]);
-        DB::table('users')->insert([
-            'name'     => "Vinish Taliyan",
-            'email'    => 'vinish@oldnewtech.in',
-            'password' => bcrypt('admin@admin'),
-            'role'     => 'master',
-            'student_code' => 0000001,
-            'active'   => 1,
-            'verified' => 1,
-        ]);
 
         // factory(User::class, 10)->states('admin')->create();
         // factory(User::class, 10)->states('accountant')->create();
